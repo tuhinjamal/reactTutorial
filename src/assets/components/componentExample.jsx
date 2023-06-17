@@ -11,7 +11,6 @@ function Clock(props) {
     };
   }, []);
   return (
-    
     <div>
       <h1>The time is <span>
       {date.toLocaleTimeString()}
@@ -31,7 +30,7 @@ function Clock(props) {
 
       <p>
         Hello! I'm {props.name}, a {props.age} years old {props.occupation}.
-        Pleased to meet you! Hello,{" "}
+        Pleased to meet you! Hello, the time is {" "}
         {new Date().toLocaleTimeString(props.locale)}
       </p>
     </div>
