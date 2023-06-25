@@ -9,7 +9,7 @@ function Clock(props) {
     return function cleanup() {
       clearInterval(timerId);
     };
-  }, []);
+  });
   return (
     <div>
       <h1>The time is <span>
