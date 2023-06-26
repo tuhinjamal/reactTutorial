@@ -2,7 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Component from "./assets/components/componentExample";
+import FunctionalComponent from "./assets/components/functionalComponent";
+import ClassComponent from "./assets/components/classComponent";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,7 +11,16 @@ function App() {
   return (
     <>
       <div>
-      <Component locale="bn-BD" name="tuhinjamal" age={30} occupation="software developer"/>
+        <ClassComponent locale="bn-BD">
+          next session at 20 min tutorial no 8{" "}
+        </ClassComponent>
+
+        <FunctionalComponent
+          locale="bn-BD"
+          name="tuhinjamal"
+          age={30}
+          occupation="software developer"
+        />
 
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
