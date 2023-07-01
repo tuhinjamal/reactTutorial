@@ -12,7 +12,7 @@ function App() {
     <>
       <div>
         <ClassComponent locale="bn-BD">
-          next session at 20 min tutorial no 8{" "}
+        session 9 is running 37.24 min{" "}
         </ClassComponent>
 
         <FunctionalComponent
