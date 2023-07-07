@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Button from "./button";
 class Clock extends React.Component {
   state = {
     date: new Date(),
@@ -34,14 +32,11 @@ class Clock extends React.Component {
     });
   };
   print() {
+    const { date, locale } = this.state;
+
     return (
       <>
-        <h1>
-          Hello {this.state.date.toLocaleTimeString(this.props.locale)}{" "}
-          {this.props.children}
-        </h1>
-        <button onClick={this.handleClick}>change locale</button>
-        <Button change={this.handleClick} locale="en-US" />
+        <h1>{date.toLocaleTimeString(locale)}</h1>
       </>
     );
   }
@@ -52,16 +47,18 @@ class Clock extends React.Component {
       <div>
         {" "}
         {this.print()} {date.toLocaleTimeString(locale)}
-        The clock situated left is a clock made with react state here we cleared
-        destructuring of state and also confusion of this and solution remember
-        the keyword this here makes confusion because of call back function
+        <br />
+        <button onClick={this.handleClick}>set locale en-US</button>
+        <h3>
+          {" "}
+          The clock situated in footer is a clock made with react state here we
+          cleared destructuring of state by the second clock defined in render
+          with destructuring and also confusion of this and solution remember
+          the keyword this here makes confusion because of call back function
+        </h3>
       </div>
     );
   }
 }
-Clock.propTypes = {
-  locale: PropTypes.string,
-  children: PropTypes.array,
-};
 
 export default Clock;

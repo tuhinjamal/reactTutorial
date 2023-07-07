@@ -11,9 +11,10 @@ class Clock extends React.Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {
-  //     date: new Date(),locale: "bn-BD",
+  //     date: new Date(),
+  //     locale: "bn-BD",
   //   };
-  // this.handleClick = this.handleClick.bind(this)
+  //   this.handleClick = this.handleClick.bind(this);
   // }
   componentDidMount() {
     this.clockTimer = setInterval(() => {
@@ -34,34 +35,29 @@ class Clock extends React.Component {
     });
   };
   print() {
+    const { date, locale } = this.state;
     return (
       <>
         <h1>
-          Hello {this.state.date.toLocaleTimeString(this.props.locale)}{" "}
-          {this.props.children}
+          {this.state.date.toLocaleTimeString(this.props.locale)}
+          <br /> {this.props.children} on click button or component button this
+          will not change because this clock localed passed through props and
+          also remember that props manipulation from parent is not a good
+          practicise and also makes complexcity with this prop chareterstics
+          remember vue is immutable
         </h1>
-        <button onClick={this.handleClick}>change locale</button>
-        <Button change={this.handleClick} locale="en-US" />
+        <h1>{date.toLocaleTimeString(locale)}</h1>
+        <Button change={this.handleClick} locale="bn-US" />
       </>
     );
   }
 
   render() {
-    const { date, locale } = this.state;
-    return (
-      <div>
-        {" "}
-        {this.print()} {date.toLocaleTimeString(locale)}
-        The clock situated left is a clock made with react state here we cleared
-        destructuring of state and also confusion of this and solution remember
-        the keyword this here makes confusion because of call back function
-      </div>
-    );
+    return <div>{this.print()}</div>;
   }
 }
 Clock.propTypes = {
   locale: PropTypes.string,
   children: PropTypes.array,
 };
-
 export default Clock;

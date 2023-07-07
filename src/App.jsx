@@ -1,18 +1,28 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+// import { useState } from "react";
 import "./App.css";
-import FunctionalComponent from "./assets/components/functionalComponent";
-import ClassComponent from "./assets/components/classComponent";
+import Header from "./assets/components/revision/header";
+import Footer from "./assets/components/revision/footer";
+
+// import FunctionalComponent from "./assets/components/functionalComponent";
+// import ClassComponent from "./assets/components/classComponent";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
+      <Header />
+      <Footer />
+    </>
+  );
+}
+
+export default App;
+
+{
+  /* <div>
         <ClassComponent locale="bn-BD">
-        session 9 is running 37.24 min{" "}
+          session 9 done now it's 10{" "}
         </ClassComponent>
 
         <FunctionalComponent
@@ -37,9 +47,5 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
-      </div>
-    </>
-  );
+      </div> */
 }
-
-export default App;

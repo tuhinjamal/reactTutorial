@@ -21,7 +21,7 @@ class Button extends React.Component {
   }
 }
 Button.propTypes = {
-  change: PropTypes.string,
+  change: PropTypes.func,
   locale: PropTypes.string,
 };
 export default Button;
