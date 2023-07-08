@@ -38,16 +38,19 @@ class Clock extends React.Component {
     const { date, locale } = this.state;
     return (
       <>
-        <h1>
+        <h4>
           {this.state.date.toLocaleTimeString(this.props.locale)}
-          <br /> {this.props.children} on click button or component button this
-          will not change because this clock localed passed through props and
-          also remember that props manipulation from parent is not a good
-          practicise and also makes complexcity with this prop chareterstics
-          remember vue is immutable
-        </h1>
+          <br /> {this.props.children}
+        </h4>
+        <p>
+          {" "}
+          on click button or component button this will not change because this
+          clock localed passed through props and also remember that props
+          manipulation from parent is not a good practicise and also makes
+          complexcity with this prop chareterstics remember vue is immutable
+        </p>
         <h1>{date.toLocaleTimeString(locale)}</h1>
-        <Button change={this.handleClick} locale="bn-US" />
+        <Button change={this.handleClick} locale="en-US" />
       </>
     );
   }

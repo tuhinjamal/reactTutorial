@@ -2,16 +2,22 @@
 import "./App.css";
 import Header from "./assets/components/revision/header";
 import Footer from "./assets/components/revision/footer";
+import ConditionalRender from "./assets/components/conditionaRender";
+import ClockList from "./assets/components/clockList";
 
 // import FunctionalComponent from "./assets/components/functionalComponent";
 // import ClassComponent from "./assets/components/classComponent";
 
 function App() {
   // const [count, setCount] = useState(0);
+  const quantities = [1, 2];
 
   return (
     <>
       <Header />
+      <ClockList quantities={quantities} />
+
+      <ConditionalRender />
       <Footer />
     </>
   );
